@@ -62,3 +62,11 @@ div.controles input{
 	padding: 5px 10px;
 	cursor: pointer;
 }
+
+footer{
+	position: absolute;
+	top: 95%;
+	left: 83%;
+	color: #F29435;
+	font-size: 16px;
+}
