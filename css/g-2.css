@@ -1,0 +1,64 @@
+body{
+	background: black;
+	width: 80%;
+	margin: auto;
+	color: #F29435;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+
+div.contenedorFos{
+	border: 2px #7C2C2D solid;
+	border-radius: 5px;
+	margin: 35px 5px 5px 5px;
+	width: 100%;
+	height: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+
+div.fosforo{
+	width: 60px;
+ 	height: 70px;
+ 	padding: 5px;
+  	margin: 10px;
+  	display: flex;
+  	align-items: center;
+}
+
+div.fosforo img{
+	height: 100%;
+	width: 60%;
+}
+
+div.controles{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+div.controles select{
+	color: #F29435;
+	font-weight: bold;
+	font-size: 17px;
+	background: #7C2C2D;
+	border: #7C2C2D;
+	border-radius: 3px;
+	padding: 4.7px;
+	margin: 0 3px;
+	cursor: pointer;
+	-moz-appearance: none;
+}
+
+div.controles input{
+	color: #F29435;
+	font-weight: bold;
+	font-size: 17px;
+	background: #7C2C2D;
+	border: #7C2C2D;
+	border-radius: 3px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
