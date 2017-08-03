@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The game</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/g-2.css">
+	</head>
+
+	<body>
+		<h1>El Juego de los Fosforos!</h1>
+		<div class="contenedorFos">
+			<h2 id="win"></h2>
+			<div class="fosforo" id="1">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="2">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="3">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="4">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="5">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="6">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="7">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="8">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="9">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+
+			<div class="fosforo" id="10">
+				<img src="imagenes/fosforo1.gif">
+			</div>
+		</div>
+
+		<div class="controles">
+			<div id="player1">
+				<h3>Player 1</h3>
+				<label for="movimiento">Fosforos a quitar</label>
+				<select name="movimiento" id="movimiento1">
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+				<input type="button" value="Quitar" id="p1" onclick="Quitar(this)";>
+			</div>
+
+			<div id="player2">
+				<h3>Player 2</h3>
+				<label for="movimiento">Fosforos a quitar</label>
+				<select name="movimiento" id="movimiento2">
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+				<input type="button" value="Quitar" id="p2" onclick="Quitar(this)";>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/g-2.js"></script>
+	</body>
+</html>
