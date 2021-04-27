@@ -1,69 +1,107 @@
-body{
-	background: black;
-	width: 80%;
-	margin: auto;
-	color: #F29435;
-	font-size: 20px;
+html,
+body,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	font-family: sans-serif;
+	color: #F29435;
 }
 
+body {
+	background: black;
+	font-size: 20px;
+}
 
-div.contenedorFos{
+.main {
+	display: block;
+	margin: 0 auto;
+	max-width: 1280px;
+	margin-top: 40px;
+}
+
+.contenedorFos {
+	display: flex;
+	justify-content: space-around;
 	border: 2px #7C2C2D solid;
 	border-radius: 5px;
 	margin: 35px 5px 5px 5px;
 	width: 100%;
-	height: 70%;
-	display: flex;
-	justify-content: space-around;
+	height: 100%;
+	max-height: 94px;
+	margin-bottom: 25px;
 }
 
-div.fosforo{
+.contenedorFos #win {
+	padding: 20px;
+}
+
+.fosforo {
 	width: 60px;
- 	height: 70px;
- 	padding: 5px;
-  	margin: 10px;
-  	display: flex;
-  	align-items: center;
+	height: 70px;
+	padding: 5px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-div.fosforo img{
+.fosforo img {
 	height: 100%;
 	width: 60%;
 }
 
-div.controles{
-	width: 80%;
-	margin: auto;
+.controles {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+	max-width: 640px;
+	margin: auto;
 }
 
-div.controles select{
+.controles>* {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+.controles h3,
+.controles label {
+	text-align: center;
+}
+
+.controles .botones {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
 	color: #F29435;
 	font-weight: bold;
 	font-size: 17px;
 	background: #7C2C2D;
 	border: #7C2C2D;
 	border-radius: 3px;
-	padding: 4.7px;
-	margin: 0 3px;
+	padding: 10px 15px;
 	cursor: pointer;
-	-moz-appearance: none;
+	margin-left: 10px;
 }
 
-div.controles input{
-	color: #F29435;
-	font-weight: bold;
-	font-size: 17px;
-	background: #7C2C2D;
-	border: #7C2C2D;
-	border-radius: 3px;
-	padding: 5px 10px;
-	cursor: pointer;
+button:disabled {
+	background-color: gray;
+	cursor: no-drop;
 }
 
-footer{
+button#btnReset {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+
+footer {
 	position: absolute;
 	top: 95%;
 	left: 83%;
