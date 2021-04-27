@@ -1,64 +1,78 @@
 var fos = 1;
 
-document.getElementById("p2").disabled = true;
-document.getElementById("win").style.display = 'none';
+restart();
 
-
-function Quitar(player) {
-	if (player.id == "p1") {
-		var movi1 = document.getElementById("movimiento1").value;
-
-		while(movi1 > 0){
-				document.getElementById(fos).style.opacity = '.1';
+function Quitar(player, movimiento) {
+	switch (player) {
+		case 'p1':
+			var movi1 = movimiento;
+			while (movi1 > 0) {
+				document.getElementById(fos).style.opacity = '0';
 				fos++;
 				movi1--;
 			}
-		desControles("p1"); //Desactiva los controles para el jugador 1
+			disableControls("p1"); //Desactiva los controles para el jugador 1
 
-		//Decide quien es el ganador
-		if (fos == 10) {
-			showWin("1");
-		}else if (fos == 11) {
-			showWin("2");
-		}
-	}else if (player.id == "p2") {
-		var movi2 = document.getElementById("movimiento2").value;
+			//Decide quien es el ganador
+			if (fos == 10) {
+				showWin("1");
+			} else if (fos == 11) {
+				showWin("2");
+			}
+			break;
 
-		while(movi2 > 0){
-				document.getElementById(fos).style.opacity = '.1';
+		case 'p2':
+			var movi2 = movimiento;
+			while (movi2 > 0) {
+				document.getElementById(fos).style.opacity = '0';
 				fos++;
 				movi2--;
 			}
-		desControles("p2"); //Desactiva los controles para el jugador 2
+			disableControls("p2"); //Desactiva los controles para el jugador 2
 
-		//Decide quien es el ganador
-		if (fos == 10) {
-			showWin("2");
-		}else if (fos == 11) {
-			showWin("1");
-		}
+			//Decide quien es el ganador
+			if (fos == 10) {
+				showWin("2");
+			} else if (fos == 11) {
+				showWin("1");
+			}
+			break;
+
+		default:
+			break;
 	}
 }
 
-function showWin(p){
-
-	for(var i = 10; i > 0; i--){
-				document.getElementById(i).style.display = 'none';
-			}
-
+function showWin(p) {
+	for (var i = 10; i > 0; i--) { document.getElementById(i).style.display = 'none'; }
 	var win = document.getElementById('win');
-
 	win.style.display = 'flex';
-	win.innerHTML = "Player "+ p +" win!";
+	win.innerHTML = "Player " + p + " win!" + ``;
+	var btnReset = document.getElementById('btnReset');
+	btnReset.style.display = 'block';
 }
 
+function restart() {
+	fos = 1;
+	for (var i = 10; i > 0; i--) {
+		document.getElementById(i).style.display = 'flex';
+		document.getElementById(i).style.opacity = '1';
+	}
+	document.getElementById("win").style.display = 'none';
+	document.getElementById("btnReset").style.display = 'none';
+	disableControls('p2');
+}
 
-function desControles(turno){
-	if (turno == "p1") {
-		document.getElementById("p1").disabled = true;
-		document.getElementById("p2").disabled = false;
-	}else if (turno == "p2") {
-		document.getElementById("p2").disabled = true;
-		document.getElementById("p1").disabled = false;
+function disableControls(turno) {
+	if (turno == 'p1') {
+		document.getElementById("p1_1").disabled = true;
+		document.getElementById("p1_2").disabled = true;
+		document.getElementById("p2_1").disabled = false;
+		document.getElementById("p2_2").disabled = false;
+	} else if (turno == 'p2') {
+		document.getElementById("p2_1").disabled = true;
+		document.getElementById("p2_2").disabled = true;
+		document.getElementById("p1_1").disabled = false;
+		document.getElementById("p1_2").disabled = false;
 	}
 }
